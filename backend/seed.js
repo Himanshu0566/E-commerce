@@ -15,7 +15,10 @@ const importData = async () => {
     await Product.deleteMany();
 
     const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(process.env.GMAIL_PASS, salt);
+    const hashedPassword = await bcrypt.hash(
+      process.env.GMAIL_ADMIN_PASS,
+      salt,
+    );
 
     const adminUser = await User.create({
       name: "HIMANSHU SINGH",

@@ -6,12 +6,12 @@ const sendEmail = async ({ email, subject, message }) => {
       service: "gmail",
       auth: {
         user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL__USER_PASS, // App Password mapping
+        pass: process.env.GMAIL_USER_PASS, // App Password mapping
       },
     });
 
     const mailOptions = {
-      from: `"ShopNest Support" <${process.env.GMAIL_USER_PASS}>`,
+      from: `"EZ Shop Support" <${process.env.GMAIL_USER_PASS}>`,
       to: email,
       subject: subject,
       html: message,
