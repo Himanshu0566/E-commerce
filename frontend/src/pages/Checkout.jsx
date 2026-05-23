@@ -45,10 +45,10 @@ const Checkout = () => {
       }
 
       const options = {
-        key: process.env.REACT_APP_RAZORPAY_KEY_ID, // Student dummy fallback
+        key: orderData.key, // Student dummy fallback
         amount: orderData.amount,
         currency: orderData.currency,
-        name: "ShopNest",
+        name: "EZ Shop",
         description: "Test Transaction",
         order_id: orderData.id,
         handler: async function (response) {
